@@ -20,12 +20,12 @@ function App() {
     <div>
       {isHeaderVisible && <Header />}
       <Routes>
-        <Route exact path="/" element={<ProtectedRoute element={<HomePage />} />} />
-        <Route exact path="/tasks" element={<ProtectedRoute element={ <TaskApp/> } />} />
-        <Route exact path="/tasks/:id" element={<ProtectedRoute element={ <TaskDetailsPage/> } />} />
-        <Route exact path="/signin" element={ <Signin/>} />
-        <Route exact path="/notfound" element={<NotFound />} />
-        <Route exact path="*" element={<Navigate to="/notfound" />} />
+        <Route path="/" element={<ProtectedRoute element={<HomePage />} />} />
+        <Route path="/tasks" element={<ProtectedRoute element={ <TaskApp/> } />} />
+        <Route path="/tasks/:id" element={<ProtectedRoute element={ <TaskDetailsPage/> } />} />
+        <Route path="/signin" element={ <Signin/>} />
+        <Route path="/notfound" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/notfound" />} />
       </Routes>
     </div>
   );
